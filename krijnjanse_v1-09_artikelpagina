@@ -1,0 +1,181 @@
+body {
+    background: white;
+    width: 90%;
+    margin: 0 auto;
+}
+
+body > header > h1, body > header > p {
+    margin: 0;
+}
+
+body > header {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: #feca30;
+}
+
+body > header > h1 {
+    order: 1;
+    text-align: left;
+}
+
+header > h1 + p {
+    text-align: left;
+    font-size: 1.5em;
+    color: white;
+    order: 2;
+    padding: 0.1em;
+}
+
+h1 {
+    color: white;
+    text-shadow: 6px 6px 10px #000000;
+    background-color: #feca30;
+    text-align: center;
+}
+
+header > nav > ul {
+    width: 100%;
+    height: 5em;
+    margin: 0;
+    list-style-type: none;
+}
+
+header > nav > ul > li {
+    background-color: rosybrown;
+    padding: 5px;
+    height: 3em;
+    float: left;
+    margin: 0.8em;
+    text-align: center;
+}
+
+header > nav > ul > li > a {
+    text-decoration: none;
+    line-height: 3em;
+}
+
+header > nav, p {
+    order: 3;
+}
+
+@media screen and (max-width:30em) {
+    nav {
+        display: block;
+        width: 100%;
+    }
+}
+
+header > form {
+    order: 3;
+    background-color: #feca30;
+    width: 20em;
+}
+
+header > form > label > input {
+    width: 17em;
+}
+
+button {
+    width: 6em;
+    height: 3em;
+    background: #8eb5f4;
+    -webkit-transition: width 4s, height 4s, -webkit-transform 4s; /* Gebruikt voor Safari */
+    transition: width 4s, height 4s, transform 4s;
+}
+
+button:hover {
+    width: 30em;
+    height: 20em;
+    -webkit-transform: rotate(180deg); /* Gebruikt voor Safari */
+    transform: rotate(180deg);
+}
+
+header > img {
+    order: 4;
+    width: 100%;
+}
+
+body > header > p > a {
+    order: 2;
+    background-color: #feca30;
+}
+
+/* --- main --- */
+
+main {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+main > article > header {
+    width: 30%;
+    float: left;
+}
+
+main > article > section {
+    width: 70%;
+    float: left;
+}
+
+@media (max-width: 35em) {
+    main > article > header {
+    width: 100%;
+
+    }
+
+    main > article > section {
+    width: 100%;
+    }
+}
+
+article {
+    width: 95%;
+    border-radius: 3em;
+    box-shadow: 5px 5px 20px black;
+}
+
+section + section {
+    margin: 2em 7em 0;
+}
+
+@media (max-width: 35em) {
+    section + section {
+    width: 100%;
+    margin: 0;
+    }
+}
+
+main > article > section > img {
+    width: 100%;
+}
+
+[href$="#"], a   {
+    color: black;
+}
+
+[href$="#"]:hover, a:hover {
+    background: orange;
+}
+
+input {
+    display: block;
+    width: 20%;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    border-radius: 2em;
+    box-shadow: inset .1em .1em .2em rgba(0,0,0,.5);
+    transition: .5s;
+    margin: .3em 0;
+    padding: .2em;
+}
+
+input:hover {
+    padding: .4em .2em;
+}
